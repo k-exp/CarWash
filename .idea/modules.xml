@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Documents/kexp/gitExperiments/CarWash/carwash/.idea/CarWashUI.iml" filepath="$USER_HOME$/Documents/kexp/gitExperiments/CarWash/carwash/.idea/CarWashUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../basicKivyProperties/.idea/basicKivyProperties.iml" filepath="$PROJECT_DIR$/../basicKivyProperties/.idea/basicKivyProperties.iml" />
+    </modules>
+  </component>
+</project>

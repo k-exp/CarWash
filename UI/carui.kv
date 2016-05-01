@@ -1,0 +1,662 @@
+<CarUI>:
+
+    size_hint: 1, 1
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    do_default_tab: False
+    tab_width: 140
+    tab_height: 50
+    background_color: 0,0,1,1
+
+    # First service selector
+    TabbedPanelItem:
+        text: 'Services 1'
+        id: firstServices
+        GridLayout:
+            cols: 4
+            Button:
+                id: s1_b1
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(1)
+            Button:
+                id: s1_b2
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(2)
+            Button:
+                id: s1_b3
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(3)
+            Button:
+                id: s1_b4
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(4)
+            Button:
+                id: s1_b5
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(5)
+            Button:
+                id: s1_b6
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(6)
+            Button:
+                id: s1_b7
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(7)
+            Button:
+                id: s1_b8
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(8)
+            Button:
+                id: s1_b9
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(9)
+            Button:
+                id: s1_b10
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(10)
+            Button:
+                id: s1_b11
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(11)
+            Button:
+                id: s1_b12
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(12)
+            Label:
+            Label:
+                id: servicesOut1
+                text_size: (500,600)
+                valign: "middle"
+            Label:
+
+            Button:
+                id: s1_b100
+                color: 0,0,1,1
+                font_size: 60
+                text: 'ENTER'
+                on_press: root.buttonPressHandler(100)
+
+    # Second service selector
+    TabbedPanelItem:
+        text: 'Services 2'
+        GridLayout:
+            cols: 4
+            Button:
+                id: s2_b13
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(13)
+            Button:
+                id: s2_b14
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(14)
+            Button:
+                id: s2_b15
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(15)
+            Button:
+                id: s2_b16
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(16)
+            Button:
+                id: s2_b17
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(17)
+            Button:
+                id: s2_b18
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(18)
+            Button:
+                id: s2_b19
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(19)
+            Button:
+                id: s2_b20
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(20)
+            Button:
+                id: s2_b21
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(21)
+            Button:
+                id: s2_b22
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(22)
+            Button:
+                id: s2_b23
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(23)
+            Button:
+                id: s2_b24
+                text: 'LOADING'
+                on_press: root.buttonPressHandler(24)
+            Label:
+            Label:
+                id: servicesOut2
+                text_size: (500,600)
+                valign: "middle"
+            Label:
+
+            Button:
+                id: s2_b200
+                color: 0,0,1,1
+                font_size: 60
+                text: 'ENTER'
+                on_press: root.buttonPressHandler(200)
+
+    # Car queue.
+    TabbedPanelItem:
+        text:'Car Queue'
+        StackLayout:
+            id: carQueue
+
+
+
+    # Service settings pane.
+    TabbedPanelItem:
+        text:'Service Settings'
+        ScrollView:
+            GridLayout:
+                padding: 20
+                spacing: 10
+                id: serviceSettings
+                cols: 3
+                # set GridLayout to be unrestricted vertically
+                size_hint_y:  None
+                # set the height of the layout to the combined height of the children
+                height: self.minimum_height
+
+                # cause the Layout's height is calculated by the children's height
+                # we have to disable size_hint_y and manually provide height
+
+                # Header
+                Label:
+                    text: "Service ID"
+                    size_hint_y: None
+                    size_hint_x: 1
+                    font_size: 25
+                    height: '29sp'
+
+                Label:
+                    text: "Service Name"
+                    size_hint_y: None
+                    size_hint_x: 2
+                    height: '29sp'
+                    font_size: 25
+
+                Label:
+                    text: "Service Price ($)"
+                    size_hint_y: None
+                    size_hint_x: 2
+                    height: '29sp'
+                    font_size: 25
+
+
+                # Input Rows
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "1"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv1_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv1_cost
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "2"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv2_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv2_cost
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "3"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv3_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv3_cost
+
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "4"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv4_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv4_cost
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "5"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv5_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv5_cost
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "6"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv6_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv6_cost
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "7"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv7_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv7_cost
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "8"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                    id: serv8_name
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "9"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "10"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "11"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "12"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "13"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "14"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "15"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "16"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "17"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "18"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "19"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "20"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "21"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "22"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "23"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+                Label:
+                    size_hint_y: None
+                    height: '29sp'
+                    text: "24"
+                TextInput:
+                    hint_text: 'Service name'
+                    size_hint_y: None
+                    height: '29sp'
+                TextInput:
+                    hint_text: 'Service Cost'
+                    size_hint_y: None
+                    height: '29sp'
+
+
+                # Save button and display.
+                Label:
+                    text: 'Admin Password:'
+                TextInput:
+                    id: savePass
+                    hint_text: 'Enter the admin password.'
+
+                Button:
+                    text:"Save"
+                    size_hint_y: None
+                    height: "50sp"
+                    on_press: root.saveSettings()
+
+<PasswordPopup>:
+    size_hint: .50,.50
+    title: "Settings Change"
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text:"PLACEHOLDER TEXT"
+            id: message
+        Button:
+            text: "Close"
+            on_press: root.closeThis()
+
+
+<ServiceModification>:
+    size_hint: 1,1
+    title: "Settings Change"
+    GridLayout:
+        cols: 4
+        Button:
+            id: b1
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(1)
+        Button:
+            id: b2
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(2)
+        Button:
+            id: b3
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(3)
+        Button:
+            id: b4
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(4)
+        Button:
+            id: b5
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(5)
+        Button:
+            id: b6
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(6)
+        Button:
+            id: b7
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(7)
+        Button:
+            id: b8
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(8)
+        Button:
+            id: b9
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(9)
+        Button:
+            id: b10
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(10)
+        Button:
+            id: b11
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(11)
+        Button:
+            id: b12
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(12)
+        Button:
+            id: b13
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(13)
+        Button:
+            id: b14
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(14)
+        Button:
+            id: b15
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(15)
+        Button:
+            id: b16
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(16)
+        Button:
+            id: b17
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(17)
+        Button:
+            id: b18
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(18)
+        Button:
+            id: b19
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(19)
+        Button:
+            id: b20
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(20)
+        Button:
+            id: b21
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(21)
+        Button:
+            id: b22
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(22)
+        Button:
+            id: b23
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(23)
+        Button:
+            id: b24
+            text: 'LOADING'
+            on_press: root.buttonPressHandler(24)
+
+        Label:
+            text:"ACTIONS ------------->"
+        Label:
+        Button:
+            text: "Remove Car"
+            color: 1,0,0,1
+            font_size: 30
+            on_press: root.removeCar()
+        Button:
+            text: "Close"
+            on_press: root.closeThis()
+            font_size: 30

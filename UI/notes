@@ -1,0 +1,57 @@
+<CarUI>:
+    TabbedPanel:
+        do_default_tab: False
+        size_hint: .5, .5
+        pos_hint: {'center_x': .5, 'center_y': .5}
+
+        TabbedPanelItem:
+            text: 'Selection 1'
+            GridLayout:
+            	cols:4
+                Button:
+                	text:'kek'
+                Button:
+                	text:'kek'
+                Button:
+                	text:'le'
+                Button:
+                	text: 'Button'
+				Button:
+					text: 'test'
+				Button:
+					text: 'test'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+				Button:
+					text: 't'
+
+        TabbedPanelItem:
+            text: 'Selection 2'
+            BoxLayout:
+
+        TabbedPanelItem:
+            text: 'Queue'
+            BoxLayout:
+
+
+1064 X 200
+
+from kivy.config import Config
+Config.set('graphics', 'width', '200')
+Config.set('graphics', 'height', '200')
